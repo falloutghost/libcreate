@@ -30,6 +30,10 @@ namespace create {
     ADD_PACKET(ID_TEMP, 1, "temperature", V_ALL);
     ADD_PACKET(ID_CHARGE , 2, "battery_charge", V_ALL);
     ADD_PACKET(ID_CAPACITY, 2, "battery_capacity", V_ALL);
+    ADD_PACKET(ID_CLIFF_LEFT_SIGNAL, 2, "cliff_signal_left", V_ALL);
+    ADD_PACKET(ID_CLIFF_FRONT_LEFT_SIGNAL, 2, "cliff_signal_front_left", V_ALL);
+    ADD_PACKET(ID_CLIFF_RIGHT_SIGNAL, 2, "cliff_signal_right", V_ALL);
+    ADD_PACKET(ID_CLIFF_FRONT_RIGHT_SIGNAL, 2, "cliff_signal_front_right", V_ALL);
     ADD_PACKET(ID_OI_MODE, 1, "oi_mode", V_2 | V_3);
     ADD_PACKET(ID_LEFT_ENC, 2, "enc_counts_left", V_3);
     ADD_PACKET(ID_RIGHT_ENC, 2, "enc_counts_right", V_3);
