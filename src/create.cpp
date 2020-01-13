@@ -897,16 +897,6 @@ namespace create {
     }
   }
 
-  uint16_t Create::getCliffSignalFrontLeft() const {
-	  if (data->isValidPacketID(ID_CLIFF_FRONT_LEFT_SIGNAL)) {
-		  return GET_DATA(ID_CLIFF_FRONT_LEFT_SIGNAL);
-	  }
-	  else {
-		  CERR("[create::Create] ", "Cliff sensors not supported!");
-		  return 0;
-	  }
-  }
-
   uint16_t Create::getCliffSignalLeft() const {
 	  if (data->isValidPacketID(ID_CLIFF_LEFT_SIGNAL)) {
 		  return GET_DATA(ID_CLIFF_LEFT_SIGNAL);
@@ -917,9 +907,9 @@ namespace create {
 	  }
   }
 
-  uint16_t Create::getCliffSignalFrontRight() const {
-	  if (data->isValidPacketID(ID_CLIFF_FRONT_RIGHT_SIGNAL)) {
-		  return GET_DATA(ID_CLIFF_FRONT_RIGHT_SIGNAL);
+  uint16_t Create::getCliffSignalFrontLeft() const {
+	  if (data->isValidPacketID(ID_CLIFF_FRONT_LEFT_SIGNAL)) {
+		  return GET_DATA(ID_CLIFF_FRONT_LEFT_SIGNAL);
 	  }
 	  else {
 		  CERR("[create::Create] ", "Cliff sensors not supported!");
@@ -930,6 +920,16 @@ namespace create {
   uint16_t Create::getCliffSignalRight() const {
 	  if (data->isValidPacketID(ID_CLIFF_RIGHT_SIGNAL)) {
 		  return GET_DATA(ID_CLIFF_RIGHT_SIGNAL);
+	  }
+	  else {
+		  CERR("[create::Create] ", "Cliff sensors not supported!");
+		  return 0;
+	  }
+  }
+
+  uint16_t Create::getCliffSignalFrontRight() const {
+	  if (data->isValidPacketID(ID_CLIFF_FRONT_RIGHT_SIGNAL)) {
+		  return GET_DATA(ID_CLIFF_FRONT_RIGHT_SIGNAL);
 	  }
 	  else {
 		  CERR("[create::Create] ", "Cliff sensors not supported!");
