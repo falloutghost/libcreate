@@ -513,6 +513,30 @@ namespace create {
       float getBatteryCapacity() const;
 
       /**
+       * \brief Get the signal strength from the front-left light sensor.
+       * \return value in range [0, 4095]
+       */
+      uint16_t getCliffSignalFrontLeft() const;
+
+      /**
+       * \brief Get the signal strength from the left light sensor.
+       * \return value in range [0, 4095]
+       */
+      uint16_t getCliffSignalLeft() const;
+
+       /**
+       * \brief Get the signal strength from the front-right light sensor.
+       * \return value in range [0, 4095]
+       */
+      uint16_t getCliffSignalFrontRight() const;
+
+      /**
+       * \brief Get the signal strength from the right light sensor.
+       * \return value in range [0, 4095]
+       */
+      uint16_t getCliffSignalRight() const;
+
+      /**
        * \return true if farthest left light sensor detects an obstacle, false otherwise.
        */
       bool isLightBumperLeft() const;
